@@ -1,0 +1,90 @@
+body{
+	font-size: 16px;
+}
+
+#header-nav{
+	background-color: black;
+	border-radius: 0;
+  	border: 0;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.navbar-brand h1 { /* Restaurant name */
+  
+  color: white;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+
+
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid white;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+
+@media (min-width: 768px){
+	#headcont{
+		height: 60px;
+	}
+}
+
+
+
+@media (max-width: 767px){
+#collapsable-nav {
+  background-color: brown;
+}
+}
+#nav-list{
+	text-transform: uppercase;
+
+  color: white;
+  text-align: center;
+}
+
+#maincontent{
+	display: block;
+
+}
+#menu{
+	margin: 0 20px
+	clear:both;
+}
+
+#chicken{
+	height: 1000px;
+	margin-top: 20px;
+	background-color: gray;
+}
+
+#chictitle{
+	margin-top: 20px;
+	color: black;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 20px;
+}
+
+#chiccontent{
+	margin-top: 25px;
+	color: black;
+}
+
+
+
+
+

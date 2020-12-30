@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app='LunchCheck'>
+<head>
+	<title>LunchCheck</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body >
+
+	<div ng-controller = 'checkItems'>
+
+	<input type="text" ng-model="items">
+	<input type="button" value="check if too much" ng-click = "check()">
+	<br>
+	{{message}}
+
+	</div>
+
+</body>
+</html>

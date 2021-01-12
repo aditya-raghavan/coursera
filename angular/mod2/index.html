@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping List check off</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body ng-app="shoppingapp">
+
+	<div id="firstdiv" class="col-md-6">
+	<div class="containingdiv">
+	<div ng-controller="ToBuyController as tobuy">
+		<div>To buy:</div>
+		<div ng-if="tobuy.items.length==0">Everything is Bought</div>
+		<ul>
+			<li ng-repeat="item in tobuy.items">
+				Buy {{item.quantity}} {{item.name}} 
+				<button ng-click="tobuy.boughtitem($index);">Bought</button>
+			</li>
+		</ul>
+	</div></div></div>
+
+	<div id="seconddiv" class="col-md-6">
+	<div class="containingdiv">
+	<div ng-controller="BoughtController as bought">
+		<div>Already Bought:</div><br>
+		<div ng-if="bought.items.length==0">Nothing Bought yet</div>
+		<ul>
+			<li ng-repeat="item in bought.items">
+				Bought {{item.quantity}} {{item.name}}
+			</li>
+		</ul>
+	</div></div></div>
+
+</body>
+</html>

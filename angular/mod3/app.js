@@ -9,7 +9,8 @@
 			templateUrl: 'founditems.html',
 			scope : {
 				found : '<',
-				onRemove: '&'
+				onRemove: '&',
+
 			},
 			controller: founditemscontroller,
 		    controllerAs: 'ctrl',
@@ -37,8 +38,11 @@
 		
 
 		ctrl.search = function(searchTerm){
-
-			var promise = MenuSearchService.getMatchedMenuItems(searchTerm);
+			if(searchTerm == null || searchTerm == ""){
+				ctrl.found = [];
+			}
+			else{
+				var promise = MenuSearchService.getMatchedMenuItems(searchTerm);
 			
 			promise.then(function(response){
 
@@ -48,6 +52,10 @@
 			.catch(function(error){
 				console.log("Terribly wrong! ");
 			})
+
+			}
+
+			
 
 
 			
